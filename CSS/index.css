@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap');
+
+
+:root {
+    --bg-clr-main: hsl(222, 26%, 31%);
+    --bg-clr-screen: hsl(224, 36%, 15%);
+    --bg-clr-bottom-and-toggle: hsl(223, 31%, 20%);
+    --bg-blue__key: hsl(225, 21%, 49%);
+    --bg-red__key: hsl(6, 63%, 50%);
+    --bg-orange__key: hsl(30, 25%, 89%);
+    --clr-white__text: hsl(0, 0%, 100%);
+    --clr-blue__text: hsl(221, 14%, 31%);
+    --clr-red-key-shadow: hsl(6, 63%, 50%);
+    --clr-orange-key-shadow: hsl(28, 16%, 65%);
+    --clr-blue-key-shadow: hsl(224, 28%, 35%);
+    --ff-primary: 'League Spartan';
+}
+
+/* --CSS Resets */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+#root,
+.bg {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    width: 100%;
+}
+
+button {
+    border: 0;
+    border-style: none;
+    cursor: pointer;
+    font-family: var(--ff-primary);
+}
+
+header {
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-block: 2rem;
+    padding: 0 0 3rem 0;
+}
+
+/* ---Custom Classes---- */
+.pos-rel {
+    position: relative;
+}
+
+.pos-abs {
+    position: absolute;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+/* -----main styling--- */
+body {
+    font-family: var(--ff-primary);
+    font-weight: 700;
+}
+
+.bg {
+    justify-content: center;
+    align-items: center;
+}
+
+/* -----BUTTON STYLING------ */
+.btn {
+    border-width: 2px;
+    border-bottom: .2rem outset;
+    border-radius: 8px;
+    /* width: 4rem; */
+    /* font-size: 1.3rem; */
+    font-weight: 700;
+}
+
+
+.btn:not(#deleteBtn, #resetBtn, #equalsBtn) {
+    font-size: 1.5rem;
+}
+
+#deleteBtn, #resetBtn, #equalsBtn{
+    font-size: 1rem;
+}
+
+.btn:active {
+    border-style: inset;
+}
+
+.reset-btn {
+    grid-column: 1 / span 2;
+    grid-row: 5 / 6;
+}
+
+.equals-btn {
+    grid-column: span 2;
+    grid-row: 5 / 6;
+}
+
+/* ----------------------- */
+
+
+/* Calculator layout styling */
+.calculator {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    max-width: 400px;
+    margin: 0 auto;
+    row-gap: 2rem;
+    padding-inline: 2rem;
+    /* row-gap: 5rem; */
+    row-gap: 2rem;
+}
+
+.calculator__screen {
+    height: 5rem;
+    border-radius: 10px;
+    padding-inline: 2rem;
+    padding-block: 1em;
+    background-color: aquamarine;
+    justify-content: flex-end;
+}
+
+.calculator__screen-text {
+    transform: translateY(10%);
+}
+
+.calculator__btm {
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 3rem;
+    gap: 1rem;
+    border-radius: 10px;
+    align-content: center;
+    height: fit-content;
+    padding: 1.5rem;
+}
+
+/* ------------------------------------ */
+
+/* Calculator theme-toggler-box styling---- */
+.toggle-box {
+    align-items: flex-end;
+    justify-items: center;
+    gap: 2rem;
+}
+
+.toggle-box__theme-name {
+    /* gap: 1rem; */
+    justify-content: space-between;
+    padding-inline: .7rem;
+    margin-bottom: 4px;
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+.toggle-box__slider {
+    width: 50px;
+    height: 20px;
+    border-radius: 160px;
+    cursor: pointer;
+}
+
+.slider-container {
+    transform: translatey(10%);
+}
+
+.toggler {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 35%;
+    border-radius: 50%;
+    transform: scale(0.6);
+}
+
+.toggler[bs-target='theme-1'] {
+    left: 0;
+    right: auto;
+}
+
+
+.toggler[bs-target='theme-2'] {
+    right: 60%;
+    left: 35%;
+}
+
+.toggler[bs-target='theme-3'] {
+    left: auto;
+    right: 0;
+}
+
+.theme-cell {
+    width: 33%;
+    height: inherit;
+}
+
+.toggle__name {
+    font-size: 1rem;
+}
+
+/* --------------------------------------- */
+
+@media (max-width:500px) {
+    .logo {
+        font-size: 2rem;
+    }
+
+    main {
+        /* height: 100%; */
+        /* display: flex; */
+    }
+
+    .calculator {
+        /* width: 100%; */
+        /* align-items:normal; */
+    }
+
+    .calculator__screen {
+        /* height: 10rem; */
+    }
+
+    .btn {
+        /* padding: 2em 1em;     */
+    }
+
+
+    .calculator__btm {
+        grid-auto-rows: 3.5rem;
+    }
+
+    .toggle-box__slider {
+        width: 70px;
+        height: 30px;
+    }
+
+}
+
+@media (max-width:300px) {
+    .calculator {
+        padding: .5rem;
+    }
+}

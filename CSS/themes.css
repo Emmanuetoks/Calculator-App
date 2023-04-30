@@ -1,0 +1,216 @@
+:root {
+    /*------ THEME-1 BACKGROUND COLORS ------*/
+    --theme-1-bg--clr-main: hsl(222, 26%, 31%);
+    --theme-1-bg--clr-screen: hsl(224, 36%, 15%);
+    --theme-1-bg--clr-bottom-and-toggle: hsl(223, 31%, 20%) ;
+    --theme-1-bg--reset-and-delete-btn:hsl(225, 21%, 49%) ;
+    --theme-1-bg--equals-btn-and-toggler:   hsl(6, 63%, 50%);
+    --theme-1-bg--btn-active: hsl(30, 25%, 89%) ;
+
+    /*------ THEME-2 BACKGROUND COLORS ------*/
+    --theme-2-bg--clr-main: hsl(0, 0%, 90%);
+    --theme-2-bg--clr-screen: hsl(0, 0%, 93%);
+    --theme-2-bg--clr-bottom-and-toggle:  hsl(0, 5%, 81%) ;
+    --theme-2-bg--reset-and-delete-btn:hsl(185, 42%, 37%) ;
+    --theme-2-bg--equals-btn-and-toggler:   hsl(25, 98%, 40%);
+    --theme-2-bg--btn-active: hsl(30, 25%, 89%) ;
+
+    /*------ THEME-3 BACKGROUND COLORS ------*/
+    --theme-3-bg--clr-main:  hsl(268, 75%, 9%);
+    --theme-3-bg--clr-screen: hsl(268, 71%, 12%);
+    --theme-3-bg--clr-bottom-and-toggle: hsl(268, 71%, 12%) ;
+    --theme-3-bg--reset-and-delete-btn:hsl(281, 89%, 26%);
+    --theme-3-bg-normal-btn: hsl(268, 47%, 21%);
+    --theme-3-bg--equals-btn-and-toggler:   hsl(176, 100%, 44%);
+    --theme-3-bg--btn-active: hsl(268, 47%, 21%) ;
+
+
+    /*--------- THEME-1 TEXT COLOR---------*/
+    --clr-theme-1-white__text: hsl(0, 0%, 100%);
+    --clr-theme-1-blue__text: hsl(221, 14%, 31%);
+
+    /* --------THEME-2 TEXT COLORS------- */
+    --clr-theme-2-yellow-text: hsl(60, 10%, 19%);
+    --clr-theme-2-white-text: hsl(0, 0%, 100%);
+
+    /* -----THEME-3 TEXT COLORS----------- */
+    --clr-theme-3-yellow-text: hsl(52, 100%, 62%);
+    --clr-theme-3-white-text: hsl(0, 0%, 100%);
+    --clr-theme-3-blue-text: hsl(198, 20%, 13%);
+
+    /*---- THEME-1 KEY SHADOW COLORS  ----*/
+    --clr-theme-1-equals-btn-shadow: hsl(6, 63%, 50%);
+    --clr-theme-1-active-btn-shadow:hsl(28, 16%, 65%) ; 
+    --clr-theme-1-reset-btn-and-delete-btn-shadow: hsl(185, 58%, 25%);
+
+    /*---- THEME-2 KEY SHADOW COLORS ------*/
+    --clr-theme-2-equals-btn-shadow: hsl(25, 99%, 27%);
+    --clr-theme-2-active-btn-shadow:hsl(28, 16%, 65%) ; 
+    --clr-theme-2-reset-btn-and-delete-btn-shadow: hsl(185, 58%, 25%);
+
+    /* ----THEME-3 KEY SHADOW COLORS---- */
+    --clr-theme-3-equals-btn-shadow:  hsl(177, 92%, 70%);
+    --clr-theme-3-active-btn-shadow: hsl(290, 70%, 36%) ; 
+    --clr-theme-3-reset-btn-and-delete-btn-shadow: hsl(285, 91%, 52%);
+
+    --clr-theme-3-normal-btn-shadow: hsl(290, 70%, 36%) ;
+}
+
+/* --------------------STYLES FOR THEME-1-------------------------- */
+/* ----Back ground styling---- */
+.theme-1 .bg {
+    background-color: var(--theme-1-bg--clr-main);
+}
+
+.theme-1 .calculator__btm {
+    background-color: var(--theme-1-bg--clr-bottom-and-toggle);
+}
+
+.theme-1 .calculator__screen {
+    background-color: var(--theme-1-bg--clr-screen);
+}
+/* ---------------------------- */
+
+
+/* --Button styling--- */
+.theme-1 .btn:not(.theme-1 .equals-btn, .theme-1 .delete-btn, .theme-1 .reset-btn ) {
+    color: var(--clr-theme-1-blue__text);
+}
+.theme-1 .equals-btn {
+    background-color: var(--theme-1-bg--equals-btn-and-toggler);
+    border-color: var(--clr-theme-1-equals-btn-shadow);
+    color: var(--clr-theme-1-white__text);
+}
+
+.theme-1 .delete-btn, .theme-1 .reset-btn {
+    background-color: var(--theme-1-bg--reset-and-delete-btn);
+    border-color: var(--clr-theme-1-reset-btn-and-delete-btn-shadow);
+    color: var(--clr-theme-1-white__text);
+}
+/* --------------------- */
+
+
+/* ----Calculator top styling----- */
+
+.theme-1 .calculator__screen-text, .theme-1 .calculator-header {
+    color: var(--clr-theme-1-white__text);
+}
+
+.theme-1 .toggle-box__slider {
+    background-color: var(--theme-1-bg--clr-bottom-and-toggle);
+}
+
+.theme-1 .toggler{
+    background-color: var(--theme-1-bg--equals-btn-and-toggler);
+}
+
+
+/* ------------------------------------------------------------------------ */
+
+
+
+/* ------------------------STYLES FOR THEME-2 ---------------------*/
+/* ----Back ground styling---- */
+.theme-2 .bg {
+    background-color: var(--theme-2-bg--clr-main);
+}
+
+.theme-2 .calculator__btm {
+    background-color: var(--theme-2-bg--clr-bottom-and-toggle);
+}
+
+.theme-2 .calculator__screen {
+    background-color: var(--theme-2-bg--clr-screen);
+}
+/* ---------------------------- */
+
+
+/* --Button styling--- */
+.theme-2 .btn:not(.theme-2 .equals-btn, .theme-2 .delete-btn, .theme-2 .reset-btn ) {
+    color: var(--clr-theme-2-yellow-text);
+}
+
+.theme-2 .equals-btn {
+    background-color: var(--theme-2-bg--equals-btn-and-toggler);
+    border-color: var(--clr-theme-2-equals-btn-shadow);
+    color: var(--clr-theme-2-white-text);
+}
+
+.theme-2 .delete-btn, .theme-2 .reset-btn {
+    background-color: var(--theme-2-bg--reset-and-delete-btn);
+    border-color: var(--clr-theme-2-reset-btn-and-delete-btn-shadow);
+    color: var(--clr-theme-2-white-text);
+}
+/* --------------------- */
+
+
+/* ----Calculator top styling----- */
+
+.theme-2 .calculator__screen-text, .theme-2 .calculator-header {
+    color: var(--clr-theme-2-yellow-text);
+}
+
+.theme-2 .toggle-box__slider {
+    background-color: var(--theme-2-bg--clr-bottom-and-toggle);
+}
+
+.theme-2 .toggler{
+    background-color: var(--theme-2-bg--equals-btn-and-toggler);
+}
+
+
+
+
+/* -------------STYLES FOR THEME-3------------- */
+
+/* --Background styling--- */
+.theme-3 .bg {
+    background-color: var(--theme-3-bg--clr-main);
+}
+
+.theme-3 .calculator__btm {
+    background-color: var(--theme-3-bg--clr-bottom-and-toggle);
+}
+
+.theme-3 .calculator__screen {
+    background-color: var(--theme-3-bg--clr-screen);
+}
+/* ---------------------------- */
+
+
+/* --Button styling--- */
+.theme-3 .btn:not(.theme-3 .equals-btn, .theme-3 .delete-btn, .theme-3 .reset-btn ) {
+    color: var(--clr-theme-3-yellow-text);
+    background-color: var(--theme-3-bg-normal-btn);
+    border-color: var(--clr-theme-3-normal-btn-shadow);
+}
+.theme-3 .equals-btn {
+    background-color: var(--theme-3-bg--equals-btn-and-toggler);
+    border-color: var(--clr-theme-3-equals-btn-shadow);
+    color: var(--clr-theme-3-black-text);
+}
+
+.theme-3 .delete-btn, .theme-3 .reset-btn {
+    background-color: var(--theme-3-bg--reset-and-delete-btn);
+    border-color: var(--clr-theme-3-reset-btn-and-delete-btn-shadow);
+    color: var(--clr-theme-3-white-text);
+}
+/* --------------------- */
+
+
+/* ----Calculator top styling----- */
+
+.theme-3 .calculator__screen-text, .theme-3 .calculator-header {
+    color: var(--clr-theme-3-yellow-text);
+}
+.toggle-box__slider {
+    background-color: var(--theme-3-bg--clr-bottom-and-toggle);
+}
+
+.theme-3 .toggler{
+    background-color: var(--theme-3-bg--equals-btn-and-toggler);
+}
+
+/* ---------------------------- */
+
+
