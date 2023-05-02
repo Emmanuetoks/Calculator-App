@@ -144,8 +144,15 @@ body {
     border-radius: 10px;
     padding-inline: 2rem;
     padding-block: 1em;
-    background-color: aquamarine;
-    justify-content: flex-end;
+    width: 100%;
+    border: 0 none white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+.calculator__screen:focus {
+    box-shadow: none;
 }
 
 .calculator__screen-text {
@@ -177,7 +184,7 @@ body {
     justify-content: space-between;
     padding-inline: .7rem;
     margin-bottom: 4px;
-    font-size: .8rem;
+    /* font-size: .8rem; */
     font-weight: 300;
 }
 
@@ -223,7 +230,7 @@ body {
 }
 
 .toggle__name {
-    font-size: 1rem;
+    font-size: .7rem;
 }
 
 /* --------------------------------------- */
@@ -232,25 +239,6 @@ body {
     .logo {
         font-size: 2rem;
     }
-
-    main {
-        /* height: 100%; */
-        /* display: flex; */
-    }
-
-    .calculator {
-        /* width: 100%; */
-        /* align-items:normal; */
-    }
-
-    .calculator__screen {
-        /* height: 10rem; */
-    }
-
-    .btn {
-        /* padding: 2em 1em;     */
-    }
-
 
     .calculator__btm {
         grid-auto-rows: 3.5rem;

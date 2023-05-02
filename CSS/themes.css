@@ -92,7 +92,7 @@
 
 /* ----Calculator top styling----- */
 
-.theme-1 .calculator__screen-text, .theme-1 .calculator-header {
+.theme-1 .calculator__screen, .theme-1 .calculator-header {
     color: var(--clr-theme-1-white__text);
 }
 
@@ -103,8 +103,6 @@
 .theme-1 .toggler{
     background-color: var(--theme-1-bg--equals-btn-and-toggler);
 }
-
-
 /* ------------------------------------------------------------------------ */
 
 
@@ -146,7 +144,7 @@
 
 /* ----Calculator top styling----- */
 
-.theme-2 .calculator__screen-text, .theme-2 .calculator-header {
+.theme-2 .calculator__screen, .theme-2 .calculator-header {
     color: var(--clr-theme-2-yellow-text);
 }
 
@@ -200,7 +198,7 @@
 
 /* ----Calculator top styling----- */
 
-.theme-3 .calculator__screen-text, .theme-3 .calculator-header {
+.theme-3 .calculator__screen, .theme-3 .calculator-header {
     color: var(--clr-theme-3-yellow-text);
 }
 .toggle-box__slider {
