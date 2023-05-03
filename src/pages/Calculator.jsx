@@ -10,11 +10,12 @@ import '../../CSS/themes.css'
 
 let operationSet;
 const Calculator = () => {
-  const [calcText, setCalcText] = useState('');
-
+  // 'toggleReset' variable is used to fot the reset button
+  let [toggleReset, setToggleReset] = useState(false)
+  const [calcText, setCalcText] = useState('')
   React.useEffect(() => {
     operationSet = { num1: '', num2: '', operationName: '', result: '', outputResult: '' };
-  }, [])
+  }, [toggleReset])
 
   const add = (num1, num2) => {
     return Number(num1) + Number(num2)
@@ -35,19 +36,15 @@ const Calculator = () => {
     let operation;
     let { num1, num2, operationName } = opSet;
     let tempResult;
-
+    
     if (operationName === '+') {
       operation = add
-      // console.log('addition was carried out');
     } else if (operationName === 'x') {
-      operation = multiply
-      // console.log('multiplication was carried out');
+      operation =  multiply
     } else if (operationName === '-') {
       operation = subtract
-      // console.log('subtraction operation was carried out');
     }else if (operationName === '/'){
       operation = divide
-      // console.log('division was carried out');
     }
 
     if (num2 === '') {
@@ -59,9 +56,7 @@ const Calculator = () => {
     }
     if (operationName != '') {
       if (operationSet.num1 != '' && operationSet.num2 != '') {
-        let storedResult;
-        storedResult = operation(num1, num2);
-        operationSet.result = storedResult;
+        operationSet.result = operation(num1, num2);
         operationSet.outputResult = operationSet.result
 
       } else {
@@ -88,13 +83,11 @@ const Calculator = () => {
         }
       } else if (eventClass.contains('operation')) {
         operationSet.operationName = eventValue
-        console.log(operationSet.operationName);
-
       }
+
     } else if (operationSet.result != '') {
       if (eventClass.contains('operation')) {
         operationSet.operationName = eventValue
-        console.log(operationSet.operationName);
         operationSet.num1 = operationSet.result
         operationSet.num2 = '';
       } else {
@@ -113,7 +106,7 @@ const Calculator = () => {
       <main>
         <div className='calculator grid'>
           <CalculatorTop calcText={calcText} setCalcText={setCalcText} />
-          <CalculatorBottom setCalcText={setCalcText} handleInfo={handleInfo} operationSet={operationSet} />
+          <CalculatorBottom setToggleReset = {setToggleReset} setCalcText={setCalcText} handleInfo={handleInfo} operationSet={operationSet} />
         </div>
       </main>
     </div>

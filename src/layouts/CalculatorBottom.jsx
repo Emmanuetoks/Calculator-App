@@ -4,7 +4,7 @@ import DeleteButton from '../components/DeleteButton'
 import EqualsButton from '../components/EqualsButton'
 import ResetButton from '../components/ResetButton'
 
-const CalculatorBottom = ({ setCalcText, handleInfo, operationSet}) => {
+const CalculatorBottom = ({ setCalcText, handleInfo, operationSet, setToggleReset}) => {
   return (
     <div className='calculator__btm grid'>
       <Button btnName={7} btnClass={'number'} eventListener={handleInfo} btnValue={'7'} />
@@ -23,8 +23,8 @@ const CalculatorBottom = ({ setCalcText, handleInfo, operationSet}) => {
       <Button btnName={0} btnClass={'number'} eventListener={handleInfo} btnValue={'0'} />
       <Button btnClass={'operation'} btnValue={'/'} btnName={'divide'} eventListener={handleInfo} />
       <Button btnClass={'operation'} btnValue={'x'} btnName={'multiply'} eventListener={handleInfo} />
-      <EqualsButton setCalcText = {setCalcText} operationSet={operationSet}/>
-      <ResetButton setCalcText = {setCalcText} operationSet={operationSet}/>
+      <EqualsButton  setCalcText = {setCalcText} operationSet={operationSet}/>
+      <ResetButton setCalcText={setCalcText} setToggleReset = {setToggleReset}  />
     </div>
   )
 }
