@@ -3,6 +3,8 @@ import Calculator from '../pages/Calculator'
 
 
 const App = () => {
+    if ('virtualKeyboard' in navigator) {          navigator.virtualKeyboard.overlaysContent = true; 
+     }
   return (
     <>  
       <Calculator/>
